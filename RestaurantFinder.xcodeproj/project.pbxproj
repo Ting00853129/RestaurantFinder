@@ -11,6 +11,20 @@
 		9D3573B229581D09004B9296 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3573B129581D09004B9296 /* ContentView.swift */; };
 		9D3573B429581D0C004B9296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3573B329581D0C004B9296 /* Assets.xcassets */; };
 		9D3573B729581D0C004B9296 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3573B629581D0C004B9296 /* Preview Assets.xcassets */; };
+		9D3573BE29581D3B004B9296 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3573BD29581D3B004B9296 /* ListResponse.swift */; };
+		9D3573C029581D52004B9296 /* PlaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3573BF29581D52004B9296 /* PlaceDetails.swift */; };
+		9D3573C229581D73004B9296 /* SearchNearbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3573C129581D73004B9296 /* SearchNearbyView.swift */; };
+		9D3573C42959836F004B9296 /* GoogleRestaurantDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3573C32959836E004B9296 /* GoogleRestaurantDataFetcher.swift */; };
+		9D3573C62959972D004B9296 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3573C52959972D004B9296 /* ItemDetail.swift */; };
+		9D3573C8295998CC004B9296 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3573C7295998CC004B9296 /* ItemRow.swift */; };
+		9D6AB13B2961766400355640 /* RefreshableScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 9D6AB13A2961766400355640 /* RefreshableScrollView */; };
+		9D7C2572295B548F00DD287C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2571295B548F00DD287C /* LoginView.swift */; };
+		9D7C2574295B55F400DD287C /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2573295B55F400DD287C /* StarView.swift */; };
+		9D7C2576295B66CF00DD287C /* FavoriteFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2575295B66CE00DD287C /* FavoriteFinder.swift */; };
+		9D7C2578295B6C8200DD287C /* FavoritePlaceRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2577295B6C8200DD287C /* FavoritePlaceRowView.swift */; };
+		9D7C257C29604BA500DD287C /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C257B29604BA500DD287C /* LocationViewModel.swift */; };
+		9D82FEFD295AAD78000E29D1 /* VIPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82FEFC295AAD78000E29D1 /* VIPView.swift */; };
+		9D82FF01295AD284000E29D1 /* UserFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82FF00295AD284000E29D1 /* UserFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +33,19 @@
 		9D3573B129581D09004B9296 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9D3573B329581D0C004B9296 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3573B629581D0C004B9296 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9D3573BD29581D3B004B9296 /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
+		9D3573BF29581D52004B9296 /* PlaceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetails.swift; sourceTree = "<group>"; };
+		9D3573C129581D73004B9296 /* SearchNearbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNearbyView.swift; sourceTree = "<group>"; };
+		9D3573C32959836E004B9296 /* GoogleRestaurantDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleRestaurantDataFetcher.swift; sourceTree = "<group>"; };
+		9D3573C52959972D004B9296 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		9D3573C7295998CC004B9296 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
+		9D7C2571295B548F00DD287C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9D7C2573295B55F400DD287C /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
+		9D7C2575295B66CE00DD287C /* FavoriteFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFinder.swift; sourceTree = "<group>"; };
+		9D7C2577295B6C8200DD287C /* FavoritePlaceRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlaceRowView.swift; sourceTree = "<group>"; };
+		9D7C257B29604BA500DD287C /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		9D82FEFC295AAD78000E29D1 /* VIPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPView.swift; sourceTree = "<group>"; };
+		9D82FF00295AD284000E29D1 /* UserFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D6AB13B2961766400355640 /* RefreshableScrollView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +81,19 @@
 			children = (
 				9D3573AF29581D09004B9296 /* RestaurantFinderApp.swift */,
 				9D3573B129581D09004B9296 /* ContentView.swift */,
+				9D3573BF29581D52004B9296 /* PlaceDetails.swift */,
+				9D3573C129581D73004B9296 /* SearchNearbyView.swift */,
+				9D3573C7295998CC004B9296 /* ItemRow.swift */,
+				9D7C2577295B6C8200DD287C /* FavoritePlaceRowView.swift */,
+				9D3573C52959972D004B9296 /* ItemDetail.swift */,
+				9D82FEFC295AAD78000E29D1 /* VIPView.swift */,
+				9D7C2573295B55F400DD287C /* StarView.swift */,
+				9D7C2571295B548F00DD287C /* LoginView.swift */,
+				9D7C257B29604BA500DD287C /* LocationViewModel.swift */,
+				9D3573C32959836E004B9296 /* GoogleRestaurantDataFetcher.swift */,
+				9D82FF00295AD284000E29D1 /* UserFunction.swift */,
+				9D7C2575295B66CE00DD287C /* FavoriteFinder.swift */,
+				9D3573BD29581D3B004B9296 /* ListResponse.swift */,
 				9D3573B329581D0C004B9296 /* Assets.xcassets */,
 				9D3573B529581D0C004B9296 /* Preview Content */,
 			);
@@ -83,6 +124,9 @@
 			dependencies = (
 			);
 			name = RestaurantFinder;
+			packageProductDependencies = (
+				9D6AB13A2961766400355640 /* RefreshableScrollView */,
+			);
 			productName = RestaurantFinder;
 			productReference = 9D3573AC29581D09004B9296 /* RestaurantFinder.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 9D3573A329581D09004B9296;
+			packageReferences = (
+				9D6AB1392961766400355640 /* XCRemoteSwiftPackageReference "RefreshableScrollView" */,
+			);
 			productRefGroup = 9D3573AD29581D09004B9296 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +184,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D82FEFD295AAD78000E29D1 /* VIPView.swift in Sources */,
+				9D7C2578295B6C8200DD287C /* FavoritePlaceRowView.swift in Sources */,
+				9D3573C62959972D004B9296 /* ItemDetail.swift in Sources */,
+				9D7C2576295B66CF00DD287C /* FavoriteFinder.swift in Sources */,
+				9D3573C029581D52004B9296 /* PlaceDetails.swift in Sources */,
+				9D82FF01295AD284000E29D1 /* UserFunction.swift in Sources */,
+				9D3573BE29581D3B004B9296 /* ListResponse.swift in Sources */,
+				9D3573C229581D73004B9296 /* SearchNearbyView.swift in Sources */,
+				9D7C2574295B55F400DD287C /* StarView.swift in Sources */,
 				9D3573B229581D09004B9296 /* ContentView.swift in Sources */,
 				9D3573B029581D09004B9296 /* RestaurantFinderApp.swift in Sources */,
+				9D7C2572295B548F00DD287C /* LoginView.swift in Sources */,
+				9D3573C42959836F004B9296 /* GoogleRestaurantDataFetcher.swift in Sources */,
+				9D7C257C29604BA500DD287C /* LocationViewModel.swift in Sources */,
+				9D3573C8295998CC004B9296 /* ItemRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +329,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RestaurantFinder/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "取得定位";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,6 +358,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RestaurantFinder/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "取得定位";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -337,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9D6AB1392961766400355640 /* XCRemoteSwiftPackageReference "RefreshableScrollView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elegantchaos/RefreshableScrollView";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D6AB13A2961766400355640 /* RefreshableScrollView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D6AB1392961766400355640 /* XCRemoteSwiftPackageReference "RefreshableScrollView" */;
+			productName = RefreshableScrollView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D3573A429581D09004B9296 /* Project object */;
 }

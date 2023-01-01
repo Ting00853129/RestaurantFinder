@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "refreshablescrollview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/elegantchaos/RefreshableScrollView",
+      "state" : {
+        "branch" : "main",
+        "revision" : "83dbdcab6f30463db20043d4086b464fa205e759"
+      }
+    }
+  ],
+  "version" : 2
+}
