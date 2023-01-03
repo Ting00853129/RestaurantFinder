@@ -12,6 +12,7 @@ class GoogleRestaurantDataFetcher: ObservableObject {
     @Published var showError = false
     @Published var placeDetail = InfoResults(name: "", photos: [], reviews: [],website: "",formatted_address: "",place_id: "")
     @Published var nextPage :String? = ""
+    @Published var favorite = [InfoResults] ()
     var error: Error? {
         willSet {
             DispatchQueue.main.async {
@@ -41,8 +42,6 @@ class GoogleRestaurantDataFetcher: ObservableObject {
                         self.items = searchResponse.results
                         self.error = nil
                         self.nextPage = searchResponse.next_page_token
-//                        print("fun",self.nextPage)
-//                        print(searchResponse.results)
                     }
                 } catch {
                     self.error = error
@@ -68,6 +67,7 @@ class GoogleRestaurantDataFetcher: ObservableObject {
                     let searchResponse = try JSONDecoder().decode(DetailResponse.self, from: data)
                     DispatchQueue.main.async {
                         self.placeDetail = searchResponse.result
+                        self.favorite.append(self.placeDetail)
                         self.error = nil
                     }
                 } catch {
@@ -96,8 +96,6 @@ class GoogleRestaurantDataFetcher: ObservableObject {
                         self.nextPage = searchResponse.next_page_token
                         self.items += searchResponse.results
                         self.error = nil
-                        print(searchResponse.results)
-                        print("search next token",searchResponse.next_page_token)
                     }
                 } catch {
                     self.error = error

@@ -24,7 +24,6 @@ struct ItemRow: View {
                     .foregroundColor(.red)
             }
             VStack(alignment: .trailing){
-                
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
                 if(item.rating >= 0.0){

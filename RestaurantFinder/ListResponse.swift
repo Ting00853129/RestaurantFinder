@@ -16,12 +16,11 @@ struct ListResponse: Codable {
 
 //第二層
 struct itemResults: Codable, Equatable {
-    let name: String        //地標名稱
-    let place_id: String    //id （for 抓詳細資料使用）
-//    var photos: [photoResults] //照片
-    let rating: Double //  評分
-    let vicinity: String    //地址
-    let opening_hours : OpenState?
+    let name: String                //地標名稱
+    let place_id: String            //id （for 抓詳細資料使用）
+    let rating: Double              //評分
+    let vicinity: String            //地址
+    let opening_hours : OpenState?  //是否營業
     
 }
 

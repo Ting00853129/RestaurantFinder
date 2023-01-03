@@ -59,7 +59,6 @@ struct TrackingView: View{
                     .onAppear{
                         fetcher.fetchNearbySearch(latitude: coordinate?.latitude ?? 0, longitude: coordinate?.longitude ?? 0, searchText: "")
                     }
-                    
             } else {
                 List{
                     ForEach(fetcher.items, id: \.place_id) { item in
@@ -76,16 +75,12 @@ struct TrackingView: View{
                                 print("touch")
                             } label: {
                                 Image(systemName: "rays")
-
                             }
                             .onAppear {
-                                print("----------",oldData)
                                 DispatchQueue.global(qos: .background).asyncAfter(deadline: DispatchTime(uptimeNanoseconds: 10)) {
                                     fetcher.fetchNearbySearchNextPage(latitude: coordinate?.latitude ?? 0, longitude: coordinate?.longitude ?? 0, searchText: "", nextPage: fetcher.nextPage ?? "")
                                 }
                                 oldData = fetcher.items.count
-                                print(oldData)
-                                print(fetcher.items.count)
                             }
                             Spacer()
                         }
@@ -107,12 +102,8 @@ struct TrackingView: View{
                 $fetcher.showError, actions: {
         })
         .onAppear{
-//            if fetcher.items.isEmpty {
-//                fetcher.fetchNearbySearch(latitude: coordinate?.latitude ?? 0, longitude: coordinate?.longitude ?? 0, searchText: "")
-//            }
             if fetcher.items.isEmpty {
                 fetcher.fetchNearbySearch(latitude: 24.848720, longitude: 120.929257, searchText: "")
-//                print("first",fetcher.nextPage)
                 oldData = fetcher.items.count
                 print(oldData)
             }

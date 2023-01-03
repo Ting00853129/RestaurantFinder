@@ -80,13 +80,16 @@ class UserFunction: ObservableObject{
                 do {
                     let decoder = JSONDecoder()
                     let createUserResponse = try decoder.decode(UserBody.self, from: data)
-                    self.user = createUserResponse
-                    
+                    DispatchQueue.main.async {
+                        self.user = createUserResponse
+                    }
                 } catch {
                     print(error)
                 }
             }
-            self.Finding = false
+            DispatchQueue.main.async {
+                self.Finding = false
+            }
         }.resume()
     }
     

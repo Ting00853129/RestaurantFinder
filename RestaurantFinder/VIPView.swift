@@ -12,8 +12,8 @@ struct VIPView: View {
     @EnvironmentObject var user : UserFunction
     @State private var userEmail = ""
     @Binding var login: Bool
+    @State private var grader = "男"
     var body: some View {
-        
         if !login {
             LoginView(userEmail: $userEmail ,login: $login)
         } else {

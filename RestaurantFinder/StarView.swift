@@ -13,8 +13,6 @@ struct StarView: View {
     @Binding var userEmail : String
     @EnvironmentObject var place : FavoriteFinder
     @Binding var login: Bool
-    @State var favorite_place_fetcher : [InfoResults] = []
-    @State var num = 0
     @State var ready = false
     @State var insert = true
     var body: some View {
@@ -22,7 +20,7 @@ struct StarView: View {
             Text("\(userEmail)的收藏🔥🔥🔥")
             NavigationView {
                 List{
-                    ForEach(self.favorite_place_fetcher, id: \.place_id) { results in
+                    ForEach(fetcher.favorite, id: \.place_id) { results in
                         if results.place_id != "" {
                             NavigationLink {
                                 ItemDetail(place_id: results.place_id, login: $login)
@@ -33,35 +31,24 @@ struct StarView: View {
                     }
                 }
                 .refreshable {
+                    fetcher.favorite.removeAll()
+                    place.findUserFavoritePlace(email: userEmail)
                     for i in 0..<place.place.records.count {
-                        if place.place.records[i].fields.email == userEmail {
-                            self.num = num + 1
-                            fetcher.fetchPlaceDetail(place_id: place.place.records[i].fields.place_id)
-                            insert = true
-                            
-                            for j in 0..<favorite_place_fetcher.count {
-                                if favorite_place_fetcher[j].place_id == fetcher.placeDetail.place_id {
-                                    insert = false
-                                }
-                            }
-                            if insert {
-                                if favorite_place_fetcher.count == 0 {
-                                    self.favorite_place_fetcher.insert(fetcher.placeDetail, at: 0)
-                                } else{
-                                    self.favorite_place_fetcher.append(fetcher.placeDetail)
-                                }
-                            }
-                        }
+                        fetcher.fetchPlaceDetail(place_id: place.place.records[i].fields.place_id)
                     }
+                }
+                .onAppear{
+                    fetcher.favorite.removeAll()
+                    place.findUserFavoritePlace(email: userEmail)
                 }
             }
             .onAppear{
-                self.favorite_place_fetcher = []
-                place.findAllFavoritePlace()
+                fetcher.favorite.removeAll()
+                place.findUserFavoritePlace(email: userEmail)
             }
             Button {
                 login = false
-                
+                userEmail = ""
             } label: {
                 Text("Log out")
                     .padding(.bottom)

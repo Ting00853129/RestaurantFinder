@@ -23,37 +23,53 @@ struct ItemDetail: View {
     @State private var r = 0.0
     @State private var g = 0.0
     @State private var b = 0.0
+    @State private var showAlert = false
+    @State private var alertText = "加入收藏"
     var body: some View {
         VStack{
             HStack{
                 Text(fetcher.placeDetail.name)
+                    .font(.title2)
                     .multilineTextAlignment(.leading)
                 Spacer()
-                VStack{
-                    if login {     //是否登入
-                        Button {
-                            //收藏或移除
-                            if r == 0 { // unlike -> like
-                                place.addFavorite(email: user.email, place_id: place_id)
-                                r = 255
-                            } else {
-                                for i in 0..<place.place.records.count {
-                                    if (place.place.records[i].fields.email == user.email) && (place.place.records[i].fields.place_id == place_id) {
-                                        place.deleteFavorite(id: place.place.records[i].id)
+                HStack{
+                    VStack{
+                        if login {     //是否登入
+                            Button {
+                                //收藏或移除
+                                if r == 0 { // unlike -> like
+                                    place.addFavorite(email: user.email, place_id: place_id)
+                                    r = 255
+                                } else {
+                                    for i in 0..<place.place.records.count {
+                                        if (place.place.records[i].fields.email == user.email) && (place.place.records[i].fields.place_id == place_id) {
+                                            DispatchQueue.global(qos: .default).async {
+                                                place.deleteFavorite(id: place.place.records[i].id)
+                                            }
+                                        }
                                     }
+                                    r = 0
                                 }
-                                r = 0
+                                alertText = r == 255 ? "加入收藏" : "移除收藏"
+                                showAlert = true
+                            } label: { //點選按鈕修改圖案顏色 ＆ 新增或是刪除
+                                HStack {
+                                    Image(systemName: "heart.fill")
+                                        .foregroundColor(Color(red: r/255, green: g/255, blue: b/255))
+                                    Text("收藏")
+                                }
                             }
-                        } label: { //點選按鈕修改圖案顏色 ＆ 新增或是刪除
-                            Image(systemName: "heart.fill")
-                                .foregroundColor(Color(red: r/255, green: g/255, blue: b/255))
+                            .alert(alertText, isPresented: $showAlert) {
+                            }
+                        }
+                        if !(fetcher.placeDetail.website?.isEmpty ?? true) {
+                            ShareLink(item: fetcher.placeDetail.website ?? "")
                         }
                     }
                     if !(fetcher.placeDetail.website?.isEmpty ?? true) {
-                        ShareLink(item: fetcher.placeDetail.website ?? "")
+                        QRcodeView(url: fetcher.placeDetail.website ?? "")
                     }
                 }
-                
             }.padding(.horizontal)
             ScrollView(.horizontal){
                 HStack{
@@ -110,46 +126,6 @@ struct ItemDetail: View {
                     }
                 }
             }
-//            List{
-//                ForEach(fetcher.placeDetail.reviews, id: \.author_name) { review in
-//                    VStack(alignment: .leading){
-//                        HStack(alignment: .center) {
-//                            VStack{
-//                                AsyncImage(url: URL(string: review.profile_photo_url)) { image in
-//                                    image.resizable()
-//                                } placeholder: {
-//                                    Color.gray
-//                                }
-//                                .scaledToFill()
-//                                .frame(width: 100.0 , height: 100.0)
-//                            }
-//                            .padding(.trailing)
-//                            VStack(alignment: .leading){
-//                                Text(review.author_name)
-//                                Text(review.relative_time_description)
-//                                HStack{
-//                                    Text(String(review.rating))
-//                                    Image(systemName: "star.fill")
-//                                        .foregroundColor(.yellow)
-//                                }
-//                            }
-//                            Spacer()
-//                        }
-//                        Text(review.text)
-//                    }
-//                }
-//            }
-//            .refreshable {
-//                fetcher.fetchPlaceDetail(place_id: place_id)
-//                place.findAllFavoritePlace()
-//                for i in 0..<place.place.records.count {
-//                    if place_id == place.place.records[i].fields.place_id{
-//                        self.r = 255
-//                        self.g = 0
-//                        self.b = 0
-//                    }
-//                }
-//            }
         }.onAppear{
             fetcher.fetchPlaceDetail(place_id: place_id)
             for i in 0..<place.place.records.count {

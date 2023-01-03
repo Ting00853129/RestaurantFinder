@@ -18,6 +18,7 @@
 		9D3573C62959972D004B9296 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3573C52959972D004B9296 /* ItemDetail.swift */; };
 		9D3573C8295998CC004B9296 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3573C7295998CC004B9296 /* ItemRow.swift */; };
 		9D6AB13B2961766400355640 /* RefreshableScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 9D6AB13A2961766400355640 /* RefreshableScrollView */; };
+		9D7B77C729646FF100A6AB7C /* QRcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B77C629646FF100A6AB7C /* QRcodeView.swift */; };
 		9D7C2572295B548F00DD287C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2571295B548F00DD287C /* LoginView.swift */; };
 		9D7C2574295B55F400DD287C /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2573295B55F400DD287C /* StarView.swift */; };
 		9D7C2576295B66CF00DD287C /* FavoriteFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C2575295B66CE00DD287C /* FavoriteFinder.swift */; };
@@ -39,6 +40,7 @@
 		9D3573C32959836E004B9296 /* GoogleRestaurantDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleRestaurantDataFetcher.swift; sourceTree = "<group>"; };
 		9D3573C52959972D004B9296 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		9D3573C7295998CC004B9296 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
+		9D7B77C629646FF100A6AB7C /* QRcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeView.swift; sourceTree = "<group>"; };
 		9D7C2571295B548F00DD287C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9D7C2573295B55F400DD287C /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		9D7C2575295B66CE00DD287C /* FavoriteFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFinder.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				9D82FEFC295AAD78000E29D1 /* VIPView.swift */,
 				9D7C2573295B55F400DD287C /* StarView.swift */,
 				9D7C2571295B548F00DD287C /* LoginView.swift */,
+				9D7B77C629646FF100A6AB7C /* QRcodeView.swift */,
 				9D7C257B29604BA500DD287C /* LocationViewModel.swift */,
 				9D3573C32959836E004B9296 /* GoogleRestaurantDataFetcher.swift */,
 				9D82FF00295AD284000E29D1 /* UserFunction.swift */,
@@ -188,6 +191,7 @@
 				9D7C2578295B6C8200DD287C /* FavoritePlaceRowView.swift in Sources */,
 				9D3573C62959972D004B9296 /* ItemDetail.swift in Sources */,
 				9D7C2576295B66CF00DD287C /* FavoriteFinder.swift in Sources */,
+				9D7B77C729646FF100A6AB7C /* QRcodeView.swift in Sources */,
 				9D3573C029581D52004B9296 /* PlaceDetails.swift in Sources */,
 				9D82FF01295AD284000E29D1 /* UserFunction.swift in Sources */,
 				9D3573BE29581D3B004B9296 /* ListResponse.swift in Sources */,
