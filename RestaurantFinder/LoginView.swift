@@ -37,10 +37,16 @@ struct LoginView: View {
                         .resizable()
                         .foregroundColor(.accentColor)
                         .frame(width: 100.0, height: 120.0)
-                    Text("Restaurant Finder Find what you want")
+                    Text("Restaurant Finder")
                         .font(.title2)
                         .foregroundColor(selectedPhotoData != nil ? .white : .black)
                         .fontWeight(.medium)
+                        .padding(.bottom)
+                    Text("Find what you want")
+                        .font(.title2)
+                        .foregroundColor(selectedPhotoData != nil ? .white : .blue)
+                        .fontWeight(.medium)
+                        
                 }
                 VStack{
                     TextField("name", text: $inputEmail)

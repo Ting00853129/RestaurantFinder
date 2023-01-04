@@ -78,28 +78,28 @@ class FavoriteFinder: ObservableObject{
         }.resume()
     }
     
-    //    func findAllFavoritePlace(){
-    //        let url = URL(string: "https://api.airtable.com/v0/appS290elbkBMjgvV/Table%201")!
-    //        var request = URLRequest(url: url)
-    //        request.setValue("Bearer keyjvPMclDkRbVc8f", forHTTPHeaderField: "Authorization")
-    //        request.httpMethod = "GET"
-    //        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    //        URLSession.shared.dataTask(with: request) { (data, response, error) in
-    //            if let data = data,
-    //               let content = String(data: data, encoding: .utf8) {
-    //                print(content)
-    //            }
-    //            if let data = data {
-    //                do {
-    //                    let decoder = JSONDecoder()
-    //                    let createUserResponse = try decoder.decode(FavoriteBody.self, from: data)
-    //                    self.place = createUserResponse
-    //                } catch {
-    //                    print(error)
-    //                }
-    //            }
-    //        }.resume()
-    //    }
+        func findAllFavoritePlace(){
+            let url = URL(string: "https://api.airtable.com/v0/appS290elbkBMjgvV/Table%201")!
+            var request = URLRequest(url: url)
+            request.setValue("Bearer keyjvPMclDkRbVc8f", forHTTPHeaderField: "Authorization")
+            request.httpMethod = "GET"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if let data = data,
+                   let content = String(data: data, encoding: .utf8) {
+                    print(content)
+                }
+                if let data = data {
+                    do {
+                        let decoder = JSONDecoder()
+                        let createUserResponse = try decoder.decode(FavoriteBody.self, from: data)
+                        self.place = createUserResponse
+                    } catch {
+                        print(error)
+                    }
+                }
+            }.resume()
+        }
     
     func addFavorite (email: String, place_id: String){
         let favoriteBody = FavoriteRequestBody(records: [.init(fields: .init(email: email, place_id: place_id))])

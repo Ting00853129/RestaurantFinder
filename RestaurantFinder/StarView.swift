@@ -40,6 +40,9 @@ struct StarView: View {
                 .onAppear{
                     fetcher.favorite.removeAll()
                     place.findUserFavoritePlace(email: userEmail)
+//                    for i in 0..<place.place.records.count {
+//                        fetcher.fetchPlaceDetail(place_id: place.place.records[i].fields.place_id)
+//                    }
                 }
             }
             .onAppear{
